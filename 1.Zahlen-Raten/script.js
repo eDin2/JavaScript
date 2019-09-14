@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Dafür benötigen wir den Vergleichsoperator ==.
     // Falls die Bedingung zutrifft gibt es eine Erfolgsmeldung; falls nicht wird eine Fehlermeldung ausgegeben und der Zähler guess um eins erhöht.
     // Anschließend wird das Eingabefeld geleert und auf eine neue Eingabe gewartet.
+    //! Ausgabe erfolgt im Tag=> output
   }
 
 });
