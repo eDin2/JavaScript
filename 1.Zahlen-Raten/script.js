@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
   /* Zufallszahlen erzeugen */
   /* math.random (Helferfunktion) */
   /* *********************** */
-  document.querySelector('#submit').addEventListener("click", checkInput);
+  document.querySelector('#submitguess').addEventListener("click", checkInput);
   // An den submit-Button wird mit addEventListener ein EventListener angehängt,
   // der beim Auslösen des Klickereignisses die Funktion checkInput() aufruft.
 
@@ -34,6 +34,10 @@ document.addEventListener("DOMContentLoaded", function() {
       output.innerText = 'Schade! Versuchen Sie eine größere Zahl.';
     }
     input.value = '';
+    // Diese Funktion besteht aus einer bedingten Anweisung if(). Innerhalb der Klammern werden zwei Werte (randomNumber und input.value) miteinander verglichen.
+    // Dafür benötigen wir den Vergleichsoperator ==.
+    // Falls die Bedingung zutrifft gibt es eine Erfolgsmeldung; falls nicht wird eine Fehlermeldung ausgegeben und der Zähler guess um eins erhöht.
+    // Anschließend wird das Eingabefeld geleert und auf eine neue Eingabe gewartet.
   }
 
 });
