@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
   let randomNumberMax = 10;
   let randomNumber = rand(randomNumberMin, randomNumberMax);
   let guess = 1;
+  // die versuche werden mittels guess++ mit den jeweiligen versuchen aufsummiert
 
   function rand(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
