@@ -20,3 +20,26 @@
 .toggle-buttons input:checked+label {
   background-color: #ebf5d7;
 }
+
+/* ###################### */
+/* Style zum Aufgabenfed */
+/* ###################### */
+#task input[type="number"] {
+  width: 2em;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  margin: 0;
+  font-size: 1em;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  /*
+  Die appearance-Eigenschaft ermöglicht es,
+  Formularelementen ihr betriebssystemspezifisches Aussehen zu nehmen.
+  Dabei gibt es je nach Browser aber verschiedene Umsetzungen.
+  */
+
+  margin: 0;
+}
