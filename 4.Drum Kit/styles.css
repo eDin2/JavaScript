@@ -17,7 +17,8 @@ footer {
 }
 
 .w {
-
+  background-image: url(images/crash.png);
+  background-size: cover;
 }
 
 .a {
