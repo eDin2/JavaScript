@@ -9,7 +9,6 @@ image1.setAttribute("src", randomImgSource);
 
 
 
-
 /* Zweiter Würfell! */
 let randomNumber2 = Math.floor(Math.random() * 6) + 1;
 let randomImgSource2 = "images/dice" + randomNumber2 + ".png";
@@ -18,3 +17,11 @@ image2.setAttribute("src", randomImgSource2);
 
 
 
+/* Ausgabe des Gewinners im Tag-h1 */
+if (randomNumber1 > randomNumber2) {
+    document.querySelector("h1").innerHTML = "Spieler 1 hat gewonnen!";
+} else if (randomNumber1 < randomNumber2){
+    document.querySelector("h1").innerHTML = "Spieler 2 hat gewonnen!";
+} else {
+    document.querySelector("h1").innerHTML = "Unentschieden !!!";
+}
