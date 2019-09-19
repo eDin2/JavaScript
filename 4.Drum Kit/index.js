@@ -53,7 +53,3 @@ for (let i = 0; i < numberOfButtons; i++) {
 
   });
 }
-
-/* Play Sound */
-// let audioPlay = new Audio('sounds/crash.mp3');
-// audioPlay.play();
