@@ -12,6 +12,7 @@ for (let i = 0; i < numberOfButtons; i++) {
     // Welcher button wurde gedrückt und welcher sound muss ausgeführt werden?
     let buttonInnerHtml = this.innerHTML;
     makeSound(buttonInnerHtml);
+    buttonAnimatio(buttonInnerHtml);
 
   });
 }
@@ -19,6 +20,7 @@ for (let i = 0; i < numberOfButtons; i++) {
 // in diesem berreich wird der keyboard berreich angesprochen
 document.addEventListener("keypress", function(event) {
   makeSound(event.key);
+  buttonAnimatio(event.key);
 })
 
 
@@ -63,4 +65,15 @@ let makeSound = function(key) {
     default:
 
   }
+}
+
+// Animation der Buttons beim betätigen
+let buttonAnimatio = function(currentKey) {
+  let activeButton = document.querySelector("." + currentKey);
+  // classList ist eine angenehme Alternative zum Ansprechen der Klassen
+  activeButton.classList.add("pressed");
+
+  setTimeout(function() {
+    activeButton.classList.remove("pressed");
+  }, 100)
 }
