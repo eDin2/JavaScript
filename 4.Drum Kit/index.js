@@ -64,3 +64,9 @@ let makeSound = function(key) {
 
   }
 }
+
+// Animation wenn die buttons betätgit werden
+let buttonAnimation = function(currentKey) {
+  let activeButton = document.querySelector("." + currentKey);
+  activeButton.classList.add("pressed");
+}
