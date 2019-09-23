@@ -11,6 +11,22 @@ let buttonColours = [
 // 5. At the top of the game.js file, create a new empty array called gamePattern.
 let gamePattern = [];
 
+// 9. At the top of the game.js file, create a new empty array with the name userClickedPattern.
+let userClickedPattern = [];
+
+// 10. Use jQuery to detect when any of the buttons are clicked and trigger a handler function.
+$('btn').on('click', () => {
+  // 11. Inside the handler, create a new variable called userChosenColour to store the id of the button that got clicked.
+  let userChosenColour = $(this).attr('id');
+
+  // 12. Add the contents of the variable userChosenColour created in step 2 to the end of this new userClickedPattern
+  userClickedPattern.push(userChosenColour);
+  console.log(userClickedPattern);
+});
+
+
+
+
 // 1. Inside game.js create a new function called nextSequence()
 let nextSequnce = function() {
 
