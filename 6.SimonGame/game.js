@@ -25,8 +25,9 @@ $('.btn').click(function() {
 
   // 15.der funktion playSound wird die angeclickte farbe übergeben
   playSound(userChosenColour);
-
   /* Beim Click auf den .btn wird das ereignes in das array userClickedPattern[] geschpeichert */
+
+  animatePress(userChosenColour);
 })
 
 
@@ -59,4 +60,19 @@ let playSound = function(name) {
   // 8.Use Google/Stackoverflow to figure out how you can use Javascript to play the sound for the button colour selected in step 1.
   let audio = new Audio('sounds/' + name + '.mp3');
   audio.play();
+}
+
+
+
+
+// 16.erstelle eine funktion animatePress mit dem parameter currentColor
+let animatePress = (currentColor) => {
+
+  // 17.slectiere mit jQuery currentColor und hinterlege die classe pressed
+  $('#' + currentColor).addClass('pressed');
+
+  // 18.nach 3 sekunden kann die classe 'pressed' wieder removt werden
+  setTimeout(function() {
+    $('#' + currentColor).removeClass('pressed');
+  }, 150);
 }
