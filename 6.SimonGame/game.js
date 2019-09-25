@@ -66,6 +66,7 @@ let playSound = function(name) {
 
 
 // 16.erstelle eine funktion animatePress mit dem parameter currentColor
+// animatePress wird in die click funktion übergeben
 let animatePress = (currentColor) => {
 
   // 17.slectiere mit jQuery currentColor und hinterlege die classe pressed
