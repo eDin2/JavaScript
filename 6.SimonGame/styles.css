@@ -47,6 +47,10 @@ body {
   background-color: yellow;
 }
 
+/*
+beim cliken auf den .btn wird diese classe im html übernommen!
+funktion animatePress übernimmt diese aktion
+ */
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;

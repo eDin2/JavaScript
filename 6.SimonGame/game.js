@@ -28,7 +28,10 @@ $('.btn').click(function() {
   /* Beim Click auf den .btn wird das ereignes in das array userClickedPattern[] geschpeichert */
 
   animatePress(userChosenColour);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2ddbc85cf783a4e3945db3e8f3fc373cdb1a8f0f
 })
 
 
