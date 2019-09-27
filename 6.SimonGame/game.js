@@ -25,8 +25,10 @@ $('.btn').click(function() {
 
   // 15.der funktion playSound wird die angeclickte farbe übergeben
   playSound(userChosenColour);
-
   /* Beim Click auf den .btn wird das ereignes in das array userClickedPattern[] geschpeichert */
+
+  animatePress(userChosenColour);
+
 })
 
 
@@ -35,7 +37,7 @@ $('.btn').click(function() {
 
 
 // 1. Inside game.js create a new function called nextSequence()
-let nextSequnce = function() {
+let nextSequnce = () => {
 
   // 2. Inside the new function generate a new random number between 0 and 3, and store it in a variable called randomNumber
   let randomNumber = Math.floor(Math.random() * 4);
@@ -54,9 +56,15 @@ let nextSequnce = function() {
 
 
 // 13.erstelle eine funktion die den Sound wiedergibt von auswahl der farbe
-let playSound = function(name) {
+let playSound = (name) => {
   // 14.kopiere den erstellten code für sound in die playSound funktion
   // 8.Use Google/Stackoverflow to figure out how you can use Javascript to play the sound for the button colour selected in step 1.
   let audio = new Audio('sounds/' + name + '.mp3');
   audio.play();
+}
+
+
+
+let animatePress = (currentColour) => {
+  $('.btn').addClass('pressed');
 }
