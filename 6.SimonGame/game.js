@@ -68,6 +68,21 @@ let playSound = (name) => {
 
 
 
+<<<<<<< HEAD
 let animatePress = (currentColour) => {
   $('.btn').addClass('pressed');
+=======
+
+// 16.erstelle eine funktion animatePress mit dem parameter currentColor
+// animatePress wird in die click funktion übergeben
+let animatePress = (currentColor) => {
+
+  // 17.slectiere mit jQuery currentColor und hinterlege die classe pressed
+  $('#' + currentColor).addClass('pressed');
+
+  // 18.nach 3 sekunden kann die classe 'pressed' wieder removt werden
+  setTimeout(function() {
+    $('#' + currentColor).removeClass('pressed');
+  }, 150);
+>>>>>>> 2ddbc85cf783a4e3945db3e8f3fc373cdb1a8f0f
 }
