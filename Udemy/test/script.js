@@ -1,13 +1,16 @@
 "use strict";
 
-window.addEventListener("load", (blubb, blubber) => {
-  let machWas = () => {
-    if ("undifined" != blubb) {
-      alert("blubb");
-    }
-    if ("undifined" != blubber) {
-        alert("blubber");
-    }
-    machWas("laber Nix!");
-  };
+window.addEventListener("load", () => {
+
+  let x = 11;
+
+  let a = 10;
+  let b = 20;
+  // let a = true;
+  // let b = false;
+
+
+  if (x > a && x < b) {
+    console.log("x ist Grösser als A " + `(${a})` + " UND Kleiner als B " + `(${b})`);
+  }
 });
