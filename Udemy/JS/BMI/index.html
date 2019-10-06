@@ -10,17 +10,21 @@
 
   <form class="eingabe">
     <label>Gewicht:
-      <input id="gewicht" type="number" name="gewicht" step="0.01" min="5" max="250">
+      <input id="gewicht" type="number" name="gewicht">
     </label>
     <br>
     <label>Grösse:
-      <input id="groesse" type="number" name="groesse">
+      <input id="groesse" type="number" name="groesse" step="0.01" min="1" max="250">
     </label>
   </form>
   <button id="kalk" type="button" name="button">Berechne meine BMI</button>
 
 
   <p>Deim BMI ist: <span id="ausgabe"></span> </p>
+  <div id="normal">Normalgewicht</div>
+  <div id="ueber">Übergewicht</div>
+  <div id="unter">Untergewicht</div>
+  <div id="fett">Das ist nix Norma!!</div>
 
 
 

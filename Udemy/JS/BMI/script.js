@@ -29,7 +29,26 @@ window.addEventListener('load', function() {
 
     let ausgabeHTML = document.getElementById('ausgabe');
     ausgabeHTML.innerText = result;
+
+    // ausblenden des styles damit er spaeter wieder eingebelndet werden kann
+    document.getElementById('normal').style.display = 'none';
+    document.getElementById('ueber').style.display = 'none';
+    document.getElementById('unter').style.display = 'none';
+    document.getElementById('fett').style.display = 'none';
+
+    if (result < 17.50 && result > 1) {
+      document.getElementById('unter').style.display = "block";
+    } else if (result > 17.50 && result < 25) {
+      document.getElementById('normal').style.display = 'block';
+    } else if (result > 25 && result < 30) {
+      document.getElementById('ueber').style.display = 'block';
+    } else {
+      document.getElementById('fett').style.display = 'block';
+    }
   }
+
+
+
 
   let button = document.getElementById('kalk');
   button.addEventListener('click', berechneBMI);
