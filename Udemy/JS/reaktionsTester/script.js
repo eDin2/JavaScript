@@ -40,6 +40,9 @@ window.addEventListener("load", function() {
     startTime = new Date().getTime();
   };
 
+
+
+
   /* Timer der die Form nach einer gewissen Zeit erscheinen läst */
   /* ############################################################## */
   let setTimeAfter = () => {
@@ -65,7 +68,7 @@ window.addEventListener("load", function() {
       document.getElementById("dauer").innerHTML = dauerErrechnen + "Sekunden";
     }
 
-    /* ausgabe der Zeit im Html */ 
+    /* ausgabe der Zeit im Html */
     /* ############################################################# */
     let ausgabe = document.getElementById("dauer").innerHTML = dauerErrechnen + "Sekunden";
     let record = document.getElementById("recordTime").innerHTML = recordTime + "Sekunden";
