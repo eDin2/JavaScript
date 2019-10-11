@@ -1,6 +1,7 @@
 "use strict";
 window.addEventListener("load", function() {
-  let start = new Date().getTime();
+  let startTime = new Date().getTime();
+  let recordTime = startTime;
 
   /* Funktion die eine zufällige farbe erstellt */
   /* es wird ein zufaälliger HEX wert erstellt */
@@ -36,26 +37,40 @@ window.addEventListener("load", function() {
     document.getElementById("form").style.height = width + "px";
 
     document.getElementById("form").style.display = "block";
-    start = new Date().getTime();
+    startTime = new Date().getTime();
   };
 
-  /* Timer der dir Form nach einer gewissen Zeit erscheinen läst */
+  /* Timer der die Form nach einer gewissen Zeit erscheinen läst */
   /* ############################################################## */
   let setTimeAfter = () => {
     setTimeout(makeShapeAppear, Math.random() * 2000);
   };
   setTimeAfter();
 
+
+
+
+  /* click funktion */
   /* ############################################################# */
   document.getElementById("form").onclick = () => {
     document.getElementById("form").style.display = "none";
     document.getElementById("form").style.backgroundColor = getRandomColor;
 
     let end = new Date().getTime();
-    let dauerErrechnen = (end - start) / 1000;
+    let dauerErrechnen = (end - startTime) / 1000;
     // console.log(dauer);
-    let ausgabe = document.getElementById("dauer");
-    ausgabe.innerHTML = dauerErrechnen + "s";
+
+    if (recordTime >= dauerErrechnen) {
+      recordTime = dauerErrechnen;
+      document.getElementById("dauer").innerHTML = dauerErrechnen + "Sekunden";
+    }
+
+    /* ausgabe der Zeit im Html */ 
+    /* ############################################################# */
+    let ausgabe = document.getElementById("dauer").innerHTML = dauerErrechnen + "Sekunden";
+    let record = document.getElementById("recordTime").innerHTML = recordTime + "Sekunden";
     setTimeAfter();
+
+
   };
 });
