@@ -1,7 +1,7 @@
 "use strict";
 window.addEventListener("load", function() {
   let startTime = new Date().getTime();
-  let recordTime = startTime;
+  let recordTime = startTime; // im recordTime wird die beste Zeit geschpeichert
 
   /* Funktion die eine zufällige farbe erstellt */
   /* es wird ein zufaälliger HEX wert erstellt */
@@ -40,18 +40,12 @@ window.addEventListener("load", function() {
     startTime = new Date().getTime();
   };
 
-
-
-
   /* Timer der die Form nach einer gewissen Zeit erscheinen läst */
   /* ############################################################## */
   let setTimeAfter = () => {
     setTimeout(makeShapeAppear, Math.random() * 2000);
   };
   setTimeAfter();
-
-
-
 
   /* click funktion */
   /* ############################################################# */
@@ -70,10 +64,10 @@ window.addEventListener("load", function() {
 
     /* ausgabe der Zeit im Html */
     /* ############################################################# */
-    let ausgabe = document.getElementById("dauer").innerHTML = dauerErrechnen + "Sekunden";
-    let record = document.getElementById("recordTime").innerHTML = recordTime + "Sekunden";
+    let ausgabe = (document.getElementById("dauer").innerHTML =
+      dauerErrechnen + "Sekunden");
+    let record = (document.getElementById("recordTime").innerHTML =
+      recordTime + "Sekunden");
     setTimeAfter();
-
-
   };
 });
