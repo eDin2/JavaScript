@@ -26,6 +26,7 @@ window.addEventListener("load", function () {
 
 
     /* hiermit werden die jeweiligen Personen als variabel erstellt */
+    /* nun kann ich die vaariable in einem andrem code benutzen */
     let saban = new Person("Saban", "Mustermann", 35);
     saban.printPerson();
 
