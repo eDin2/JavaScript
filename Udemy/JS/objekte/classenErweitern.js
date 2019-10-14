@@ -11,7 +11,7 @@ window.addEventListener("load", function() {
       this.age = age;
     }
     printPerson() {
-      console.log(this.firstName + " " + this.lastName + "(" + this.age + ")");
+      return this.firstName + " " + this.lastName + "(" + this.age + ")";
       /* damit this auf die jeweiligen this's als parameter zugreifen kann, muss das this im constructor definiert werden */
     }
   }
@@ -26,16 +26,38 @@ window.addEventListener("load", function() {
       this.subject = subject;
     }
 
-    enroll() {
-      console.log("enroll() wurde ausgefährt!");
+    printPerson() { 
+      /* printPerson wird hiermit überschrieben */
+      return super.printPerson() + "; " + this.subject;
+      /* super übernimmt den rückgabwert aus dem ersten printPerson */
     }
   }
 
   /* ######################################################################################### */
   /* hiermit werden die jeweiligen Personen als variabel erstellt */
   /* nun kann ich die vaariable in einem andrem code benutzen */
-  let saban = new Student("Saban", "Mustermann", 35, "Informatik");
-  saban.printPerson();
+  let sabanPerson = new Person("Saban", "Mustermann", 35);
+  sabanPerson.printPerson();
+  let outPutPerson1 = sabanPerson.printPerson();
+  console.log(outPutPerson1);
 
-  console.log(saban);
+
+  let sabanStudent = new Student("Saban", "Mustermann", 35, "BWL");
+  sabanStudent.printPerson();
+  let outPutPerson2 = sabanStudent.printPerson();
+  console.log(outPutPerson2);
+
+
+  let edoStudent = new Student("Edo", "Mustermann", 35, "Kitarenje");
+  edoStudent.printPerson();
+  let outPutPerson3 = edoStudent.printPerson();
+  console.log(outPutPerson3);  
+
+
+  /* 
+  Nun können so viele Studenten wie Personnen erstellt werden
+  */
+  
+
+
 });
