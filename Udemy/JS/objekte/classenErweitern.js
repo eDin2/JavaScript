@@ -1,8 +1,9 @@
 "use strict";
 
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
   /* 
     Mit classen werden die einzelnen constructor eigenschaften (instanzen) definiert! 
+    in de class wird ein construktor erstellt welcher die die Instanzen definiert
     */
   class Person {
     constructor(firstName, lastName, age) {
@@ -18,15 +19,15 @@ window.addEventListener("load", function() {
 
   /* ######################################################################################## */
   class Student extends Person {
-    // Student wird die mit classe Person erweitert
-    // Student ist wie Person mit nur paar erweiterungen
+    // Student wird die mit classe Person erweitert (extends!)
+    // Student ist wie Person mit nur paar erweiterungen aus dem Person concstructor
     constructor(firstName, lastName, age, subject) {
       super(firstName, lastName, age);
       /* mit super wird der constructor für Person angesprochen */
       this.subject = subject;
     }
 
-    printPerson() { 
+    printPerson() {
       /* printPerson wird hiermit überschrieben */
       return super.printPerson() + "; " + this.subject;
       /* super übernimmt den rückgabwert aus dem ersten printPerson */
@@ -51,13 +52,13 @@ window.addEventListener("load", function() {
   let edoStudent = new Student("Edo", "Mustermann", 35, "Kitarenje");
   edoStudent.printPerson();
   let outPutPerson3 = edoStudent.printPerson();
-  console.log(outPutPerson3);  
+  console.log(outPutPerson3);
 
 
   /* 
   Nun können so viele Studenten wie Personnen erstellt werden
   */
-  
+
 
 
 });
