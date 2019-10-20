@@ -11,7 +11,7 @@ window.addEventListener("load", function() {
     abheben(menge) {
       let newGuthaben = this.guthaben - menge;
       if (newGuthaben < 0) {
-        alert("Oida in minus kannst du aber nicht!");
+        alert("Oida in's minus kannst du aber nicht gehen!");
       } else {
         this.guthaben = this.guthaben - menge;
       }
@@ -19,8 +19,11 @@ window.addEventListener("load", function() {
   }
 
   let b = new bankKonto(1000);
-  b.abheben(200);
-  b.abheben(900);
+  let eingabe1 = prompt("Welcehn Betrag möchten Sie abheben?");
+  let eingabe2 = prompt("Welcehn Betrag möchten Sie abheben?");
+
+  b.abheben(eingabe1);
+  b.abheben(eingabe2);
   console.log(b);
 
 
