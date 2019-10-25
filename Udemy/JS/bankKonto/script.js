@@ -5,16 +5,20 @@ window.addEventListener("load", function() {
   class bankKonto {
 
     constructor(guthaben) {
-      this.guthaben = guthaben;
+      this._guthaben = guthaben;
     }
 
     abheben(menge) {
-      let newGuthaben = this.guthaben - menge;
+      let newGuthaben = this._guthaben - menge;
       if (newGuthaben < 0) {
         alert("Oida in's minus kannst du aber nicht gehen!");
       } else {
-        this.guthaben = this.guthaben - menge;
+        this._guthaben = newGuthaben;
       }
+    }
+
+    getGuthaben() {
+      return this._guthaben;
     }
   }
 
@@ -24,7 +28,7 @@ window.addEventListener("load", function() {
 
   b.abheben(eingabe1);
   b.abheben(eingabe2);
-  console.log(b);
+  console.log(b.getGuthaben());
 
 
 });
