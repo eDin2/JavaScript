@@ -1,7 +1,12 @@
 "use stict";
 
-$(document).ready(function () {
-    p.css("color", "green");
+$(document).ready(function() {
+  let p = $("p.absatz");
 
+  p.css("color", "red");
+  // $("p").css("color", "green");
 
+  $("h2").click(function() {
+    $(this).css("color", "red");
+  });
 });
