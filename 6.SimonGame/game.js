@@ -43,8 +43,6 @@ let nextSequnce = () => {
 
   // 4. Create a new variable called randomChosenColour and use the randomNumber from step 2 to select a random colour from the buttonColours array.
   let randomChosenColour = buttonColours[randomNumber];
-  console.log(randomChosenColour);
-  
 
   // 6. Add the new randomChosenColour generated in step 4 to the end of the gamePattern.
   gamePattern.push[randomChosenColour];
