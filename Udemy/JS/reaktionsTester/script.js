@@ -1,3 +1,5 @@
+//jshint esversion:6
+
 "use strict";
 window.addEventListener("load", function() {
   let startTime = new Date().getTime();
