@@ -14,7 +14,7 @@ app.get('/contact', function () {
 
 
 app.get('/about', function () {
-    res.send("Mein Name ist ????!");;
+    res.send("Mein Name ist ????!");
 });
 
 app.listen(3000, function () {
