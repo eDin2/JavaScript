@@ -13,11 +13,11 @@
 //
 // run(f);
 
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
   let masseObj = document.getElementById("gewicht");
   let laengeObj = document.getElementById("groesse");
 
-  let berechneBMI = function() {
+  let berechneBMI = function () {
     let masseEingabe = parseFloat(masseObj.value);
     let laengeEingabe = parseFloat(laengeObj.value.replace(",", "."));
     // mit parseFloat wird der die zahl in ein string umgewandelt
